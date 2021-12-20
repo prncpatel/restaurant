@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google fonts link -->
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Norican&family=Noto+Serif&family=Poppins&family=Prompt:wght@700&family=Rubik:wght@500&family=Secular+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- jquery link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Owl slider link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/website/CSS/style.css">
+        
+
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
+	<!--script type="text/javascript" src="engine0/jquery.js"></script-->
+	<!-- End WOWSlider.com HEAD section -->
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
+	<!--script type="text/javascript" src="engine0/jquery.js"></script-->
+	<!-- End WOWSlider.com HEAD section -->
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<!--script type="text/javascript" src="engine1/jquery.js"></script-->
+	<!-- End WOWSlider.com HEAD section --></head>
+<body>
+    <!-- PAGE LOADER -->
+    <div class="loader">
+        <div class="spinner-border text-primary"></div>
+    </div>
+    <script>
+        setTimeout(function(){
+            $('.loader').fadeToggle('slow');
+        },2000);
+        AOS.init();
+        $(document).ready(function(){
+            $('.home').hover(function(){
+                $('#home').fadeToggle();
+            });
+        
+            $("#all").click(function(){
+              $(".lunch,.dinner,.dessert,.main").slideDown('slow');
+            });
+            $("#lunch").click(function(){
+              $(document).filter(
+                $('.lunch').fadeIn('slow'));
+                $(document).not($('.main,.dessert,.dinner').fadeOut('slow'));
+            });
+            $("#dinner").click(function(){
+              $(document).filter(
+                $('.dinner').fadeIn('slow'));
+                $(document).not($('.main,.lunch,.dessert').fadeOut('slow'));
+            });
+            $("#dessert").click(function(){
+              $(document).filter(
+                $('.dessert').fadeIn('slow'));
+                $(document).not($('.main,.lunch,.dinner').fadeOut('slow'));
+            });
+            $("#main").click(function(){
+              $(document).filter(
+                $('.main').fadeIn('slow'));
+                $(document).not($('.dessert,.lunch,.dinner').fadeOut('slow'));
+            });
+            $('.arrowup').click(function(){
+             // window.scrollTo(0,0);
+              window.scrollTo({
+                top:0,
+                behavior:'smooth'
+              })
+            });
+
+            $("#bars").click(function(){
+              $("#bars").fadeOut();
+              $("#cancel").css("visibility","visible");
+              $("#cancel").fadeIn();
+            });
+            $("#cancel").click(function(){
+              $("#cancel").fadeOut();
+              $("#bars").fadeIn();
+            });
+
+            //owl
+            $('.owl-carousel').owlCarousel({
+              loop:true,
+              margin:10,
+              autoplay:true,
+              responsiveClass:true,
+              responsive:{
+                  0:{
+                      items:1,
+                      nav:true
+                  },
+                  600:{
+                      items:2,
+                      nav:false
+                  },
+                  1000:{
+                      items:3,
+                      nav:true,
+                      loop:false
+                  }
+              }
+          })
+        });
+    </Script>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand title" href="#">D'BENTO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=" navbar-toggler-icon"><i class="fas fa-bars fa-xl" id="bars"></i><i class="fas fa-times fa-xl" style="visibility:hidden; position:absolute; top:26px; right:35px; display:flex;" id="cancel"></i></span>
+            </button>
+          
+            <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+              <ul class="navbar-nav d-flex justify-content-around w-75 mx-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link home" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    HOME <i class="fas fa-angle-down fa-sm"></i>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="home">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                      PAGES <i class="fas fa-angle-down fa-sm"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                      MENU <i class="fas fa-angle-down fa-sm"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                      GALLERY <i class="fas fa-angle-down fa-sm"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                      #LOG <i class="fas fa-angle-down fa-sm"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">RESERVATION</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <!-- BANNER SECTION -->
+    <section class="banner mb-5">
+        <div class="row m-0 h-100">
+            <div class="col-12 p-0 h-100 imgcontainer">
+	 
+	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+	
+	<!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+		<li><a href="http://wowslider.net"><img src="data1/images/ellaolssonopbjwbccaeounsplashmin.jpg" alt="jquery image carousel" title="The Best Tasting Experience" id="wows1_0"/></a>The sliders you create with WOW jQuery Slider will not only look fantastic latest your slider with a simple click of the mouse when using WOW jQuery Slider.</li>
+		<li><img src="data1/images/chadmontanomqt0asuoicuunsplashmin.jpg" alt="The Best Tasting Experience" title="The Best Tasting Experience" id="wows1_1"/>The sliders you create with WOW jQuery Slider will not only look fantastic latest your slider with a simple click of the mouse when using WOW jQuery Slider.</li>
+	</ul></div>
+<div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">javascript slideshow</a> by WOWSlider.com v9.0</div>
+	<div class="ws_shadow"></div>
+	</div>	 -->
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<script type="text/javascript" src="engine1/script.js"></script>
+	<!-- End WOWSlider.com BODY section -->
+            </div>
+        </div>
+    </section>
+    <!-- Welcome section -->
+    <section class="welcome mb-5">
+        <div class="row m-0">
+            <div class="col-12 p-0 d-flex justify-content-center">
+                <h2 class="commonheading" data-aos="fade-right">Welcome to D'bento</h2>
+            </div>
+        </div>
+        <div class="row m-0 d-flex justify-content-center">
+            <div class="col-md-6 p-0 d-flex justify-content-center">
+                <p class="text-center px-4" data-aos="fade-left">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora maiores fugit vitae cum a, expedita quo? Assumenda quas deserunt corrupti mollitia itaque. Aspernatur et, excepturi dolor maxime harum.</p>
+            </div>
+        </div>
+        <div class="row m-0 d-flex justify-content-around welcomecard">
+            <div class="col-lg-1 p-0"></div>
+            <div class="col-md-3 p-0" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+                <div class="card">
+                    <img src="/website/All images/brooke-lark-HlNcigvUi4Q-unsplash-min.jpg" class="card-img-top" height="180px">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h4 class="commonsubheading">Daily New Fresh Menus</h4>
+                        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium vel nesciunt aspernatur ut.</p>
+                        <button class="btn btn-outline-dark rounded-0 w-50">View More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-0" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+                <div class="card">
+                    <img src="/website/All images/lily-banse--YHSwy6uqvk-unsplash-min.jpg" class="card-img-top" height="180px">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h4 class="commonsubheading">Daily New Fresh Menus</h4>
+                        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium vel nesciunt aspernatur ut.</p>
+                        <button class="btn btn-outline-dark rounded-0 w-50">View More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 p-0" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+                <div class="card">
+                    <img src="/website/All images/davide-cantelli-jpkfc5_d-DI-unsplash-min.jpg" class="card-img-top" height="180px">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <h4 class="commonsubheading">Daily New Fresh Menus</h4>
+                        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium vel nesciunt aspernatur ut.</p>
+                        <button class="btn btn-outline-dark rounded-0 w-50">View More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 p-0"></div>
+        </div>
+    </section>
+    <!-- Special menu section -->
+    <section class="specialmenu pt-4 pb-5 mb-5">
+      <div class="row m-0">
+        <div class="col-12 p-0">
+          <h2 class="commonheading text-center py-4 text-white" data-aos="zoom-in">Check Our Daily Specials</h2>
+        </div>
+      </div>
+      <div class="container bg-white">
+        <div class="row m-0">
+          <div class="col-3 p-0"></div>
+          <div class="col-lg-6 p-0 pt-4 d-flex flex-column align-items-center" data-aos="fade-left">
+            <span class="commonsubheading text-warning">$35.64</span>
+            <h4 class="menusubheading text-center">Crispy Shrimp & Grits</h4>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam.</p>
+            <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="150px" height="50px">
+            <span class="commonsubheading text-warning">$35.64</span>
+            <h4 class="menusubheading text-center">Pizza Grilled Quesadilla</h4>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam.</p>
+            <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="150px" height="50px">
+            <span class="commonsubheading text-warning">$35.64</span>
+            <h4 class="menusubheading text-center">Chesapeake Crab & Artichoke Dip</h4>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam.</p>
+            <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="150px" height="50px">
+          </div>
+          <div class="col-3 p-0"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Main menu section -->
+    <section class="mainmenu mb-5">
+      <div class="row m-0 d-flex justify-content-center">
+        <div class="col-lg-6 p-0 d-flex flex-column align-items-center">
+          <h2 class="commonheading text-center" data-aos="fade-right">Discover Our Menu</h2>
+          <p class="text-center px-4" data-aos="fade-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolore, tenetur praesentium aliquid repudiandae adipisci odit sequi nisi, eius sit aut magni odio non commodi quae alias.</p>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-3 p-0"></div>
+        <div class="col-lg-6 p-0 d-flex justify-content-around px-5">
+          <a class="commonsubheading" id="all">All</a>
+          <a  class="commonsubheading" id="lunch">Lunch</a>
+          <a  class="commonsubheading" id="dinner">Dinner</a>
+          <a  class="commonsubheading" id="dessert">Dessert</a>
+          <a  class="commonsubheading" id="main">Main</a>
+        </div>
+        <div class="col-3 p-0"></div>
+      </div>
+      <div class="row m-0 mb-4 dishes">
+        <div class="col-2 p-0 mt-3"></div>
+        <div class="col-xl-8 p-0 d-flex flex-wrap products">
+          <div class="lunch card1" data-aos="zoom-in">
+            <div class="card d-flex flex-column align-items-center py-3 px-2 rounded-0 lunch">
+              <span class="commonsubheading text-warning">$35.64</span>
+              <h4 class="cardheading text-center">Chesapeake Crab & Artichoke Dip</h4>
+              <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="120px" height="30px">
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p> 
+            </div>
+          </div>  
+          <div class="lunch card1" data-aos="zoom-in">
+            <div class="card rounded-0 lunch">
+             <img src="/website/All images/anna-pelzer-IGfIGP5ONV0-unsplash-min.jpg" height="100%">
+            </div>
+          </div>
+          <div class="lunch card1" data-aos="zoom-in">
+            <div class="card d-flex flex-column align-items-center py-3 px-2 rounded-0 lunch">
+              <span class="commonsubheading text-warning">$35.64</span>
+              <h4 class="cardheading text-center">Bread Grill Chicken Sauce</h4>
+              <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="120px" height="30px">
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p> 
+            </div>
+          </div>
+          <div class="lunch card1" data-aos="zoom-in">
+            <div class="card rounded-0 lunch">
+              <img src="/website/All images/brooke-lark-HlNcigvUi4Q-unsplash-min.jpg" height="100%">
+            </div>  
+          </div>
+          <div class="dinner card1" data-aos="zoom-in">
+            <div class="card d-flex flex-column align-items-center py-3 px-2 rounded-0" id="dinner">
+              <span class="commonsubheading text-warning">$35.64</span>
+              <h4 class="cardheading text-center">Crispy Salad and Avocado</h4>
+              <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="120px" height="30px">
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>   
+          </div>
+          <div class="dinner card1" data-aos="zoom-in">
+            <div class="card rounded-0 dinner">
+              <img src="/website/All images/davide-cantelli-jpkfc5_d-DI-unsplash-min.jpg" height="100%">
+            </div>
+          </div>  
+          <div class="main card1" data-aos="zoom-in">
+            <div class="card d-flex flex-column align-items-center py-3 px-2 rounded-0 main">
+              <span class="commonsubheading text-warning">$35.64</span>
+              <h4 class="cardheading text-center">Crispy Salad and Avocado</h4>
+              <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="120px" height="30px">
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p> 
+            </div>
+          </div>  
+          <div class="main card1" data-aos="zoom-in">
+            <div class="card rounded-0 main">
+              <img src="/website/All images/lidye-1Shk_PkNkNw-unsplash-min.jpg" height="100%">
+            </div>
+          </div>  
+          <div class="main card1" data-aos="zoom-in">
+            <div class="card d-flex flex-column align-items-center py-3 px-2 rounded-0 main">
+              <span class="commonsubheading text-warning main">$35.64</span>
+              <h4 class="cardheading text-center main">Crispy Salad and Avocado</h4>
+              <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="120px" height="30px" class="main">
+              <p class="text-center main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p> 
+            </div>
+          </div>
+          <div class="main card1" data-aos="zoom-in">
+            <div class="card rounded-0 main">
+              <img src="/website/All images/brooke-lark-jUPOXXRNdcA-unsplash-min.jpg" height="100%">
+            </div>
+          </div>
+          <div class="dessert card1" data-aos="zoom-in">
+            <div class="card d-flex flex-column align-items-center py-3 px-2 rounded-0 dessert">
+              <span class="commonsubheading text-warning">$35.64</span>
+              <h4 class="cardheading text-center">Crispy Salad and Avocado</h4>
+              <img src="/website/All images/kisspng-art-clip-art-5af6b07ccd84b8.4280298115261164768418.png" width="120px" height="30px">
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit nam. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p> 
+            </div>
+          </div>  
+          <div class="dessert card1" data-aos="zoom-in">
+            <div class="card rounded-0 dessert">
+              <img src="/website/All images/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash-min.jpg" height="100%">
+            </div>
+          </div>  
+        </div>
+        <div class="col-2 p-0"></div>
+      </div>
+      <div class="row m-0 mt-5">
+        <div class="col-5 p-0"></div>
+        <div class="col-lg-2 pt-5 more">
+          <button class="btn btn-dark rounded-0 btn-block mt-5">View More</button>
+        </div>
+        <div class="col-5 p-0"></div>
+      </div>
+    </section>
+    <!-- Blog section -->
+    <section class="blog mb-5 pb-4">
+      <div class="row m-0">
+        <div class="col-12 p-0">
+          <h2 class="commonheading text-center pt-4 text-white">Our Guestbook</h2>
+          <hr style="margin: 1% auto; margin-bottom:3%; width:50%; background-color:white">
+          <div class="owl-carousel owl-theme mx-2">
+            <div class="item p-4 m-3 mr-5 d-flex flex-column align-items-center bg-white">
+              <i class="fas fa-quote-right mb-3"></i>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.lorem prisum.</p>
+              <img src="/website/All images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" class="rounded-circle" style="height: 45px; width:45px; object-fit:cover;">
+              <span class="mt-2">Emillia Riska</span>
+              <small class="">Customer</small>
+            </div>
+            <div class="item p-4 m-3 mr-5 d-flex flex-column align-items-center bg-white">
+              <i class="fas fa-quote-right mb-3"></i>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.lorem prisum.</p>
+              <img src="/website/All images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" class="rounded-circle" style="height: 45px; width:45px; object-fit:cover;">
+              <span class="mt-2">Emillia Riska</span>
+              <small class="">Customer</small>
+            </div>
+            <div class="item p-4 m-3 mr-5 d-flex flex-column align-items-center bg-white">
+              <i class="fas fa-quote-right mb-3"></i>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.lorem prisum.</p>
+              <img src="/website/All images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" class="rounded-circle" style="height: 45px; width:45px; object-fit:cover;">
+              <span class="mt-2">Emillia Riska</span>
+              <small class="">Customer</small>
+            </div>
+            <div class="item p-4 m-3 mr-5 d-flex flex-column align-items-center bg-white">
+              <i class="fas fa-quote-right mb-3"></i>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.lorem prisum.</p>
+              <img src="/website/All images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" class="rounded-circle" style="height: 45px; width:45px; object-fit:cover;">
+              <span class="mt-2">Emillia Riska</span>
+              <small class="">Customer</small>
+            </div>
+            <div class="item p-4 m-3 mr-5 d-flex flex-column align-items-center bg-white">
+              <i class="fas fa-quote-right mb-3"></i>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.lorem prisum.</p>
+              <img src="/website/All images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" class="rounded-circle" style="height: 45px; width:45px; object-fit:cover;">
+              <span class="mt-2">Emillia Riska</span>
+              <small class="">Customer</small>
+            </div>
+            <div class="item p-4 m-3 mr-5 d-flex flex-column align-items-center bg-white">
+              <i class="fas fa-quote-right mb-3"></i>
+              <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.lorem prisum.</p>
+              <img src="/website/All images/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash.jpg" class="rounded-circle" style="height: 45px; width:45px; object-fit:cover;">
+              <span class="mt-2">Emillia Riska</span>
+              <small class="">Customer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- news & Event section -->
+    <section class="welcome mb-5">
+      <div class="row m-0">
+          <div class="col-12 p-0 d-flex justify-content-center">
+              <h2 class="commonheading" data-aos="fade-left">Our News & Events</h2>
+          </div>
+      </div>
+      <div class="row m-0 d-flex justify-content-center">
+          <div class="col-md-6 p-0 d-flex justify-content-center">
+              <p class="text-center px-4" data-aos="fade-right">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora maiores fugit vitae cum a, expedita quo? Assumenda quas deserunt corrupti mollitia itaque. Aspernatur et, excepturi dolor maxime harum.</p>
+          </div>
+      </div>
+      <div class="row m-0 d-flex justify-content-around welcomecard">
+          <div class="col-lg-1 p-0"></div>
+          <div class="col-md-3 p-0" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+              <div class="card">
+                  <img src="/website/All images/brooke-lark-W9OKrxBqiZA-unsplash-min.jpg" class="card-img-top" height="180px">
+                  <span class="text-center text-white py-1" >Jun 14, 2021</span>
+                  <div class="card-body d-flex flex-column align-items-center">
+                      <h4 class="commonsubheading">Lunch party for a Chef</h4>
+                      <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium vel nesciunt aspernatur ut.</p>
+                      <button class="btn btn-outline-secondary rounded-0 w-50">View More</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 p-0" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+              <div class="card">
+                  <img src="/website/All images/emy-XoByiBymX20-unsplash-min.jpg" class="card-img-top" height="180px">
+                  <span class="text-center text-white py-1" >Jun 14, 2021</span>
+                  <div class="card-body d-flex flex-column align-items-center">
+                      <h4 class="commonsubheading">Dinner party for a Chef</h4>
+                      <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium vel nesciunt aspernatur ut.</p>
+                      <button class="btn btn-outline-secondary rounded-0 w-50">View More</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 p-0" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
+              <div class="card">
+                  <img src="/website/All images/whitney-wright-6G98hiCJETA-unsplash-min.jpg" class="card-img-top" height="180px">
+                  <span class="text-center text-white py-1" >Jun 14, 2021</span>
+                  <div class="card-body d-flex flex-column align-items-center">
+                      <h4 class="commonsubheading">Great Taste for Breakfast</h4>
+                      <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium vel nesciunt aspernatur ut.</p>
+                      <button class="btn btn-outline-dark rounded-0 w-50">View More</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-1 p-0"></div>
+      </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="row m-0 py-5 footer">
+      <div class="col-lg-3 p-4 d-flex flex-column align-items-center">
+        <h2 class="menusubheading">
+          Our Address
+        </h2>
+        <p class="text-center mx-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+        <a><strong>VIEW ON MAP</strong></a>
+      </div>
+      <div class="col-lg-3 p-4">
+        <div class="card p-3 py-5">
+          <h2 class="commonheading text-center">Make Reservation</h2>
+          <div class="timing py-4">
+            <div class="week d-flex justify-content-between py-2">
+              <span>Week Days</span>
+              <span>09:00 AM - 21:00 PM</span>
+            </div>
+            <div class="saturday d-flex justify-content-between py-2">
+              <span>Saturday</span>
+              <span>12:00 AM - 00:00 PM</span>
+            </div>
+            <div class="sunday d-flex justify-content-between py-2">
+              <span>Sunday</span>
+              <span>11:00 AM - 22:00 PM</span>
+            </div>
+          </div>
+          <button class="btn w-75 mx-auto text-white rounded-0">BOOK NOW</button>
+        </div>
+      </div>
+      <div class="col-lg-3 p-4 d-flex flex-column align-items-center">
+        <h2 class="menusubheading">
+          Contact Us
+        </h2>
+        <p class="text-center mx-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+        <a><strong>SEND MESSAGE</strong></a>
+      </div>
+    </div>
+    <hr style="background-color: rgb(255, 255, 255); width:70%; margin:0 auto;">
+    <div class="py-3 d-flex justify-content-center text-white copyrights">
+      <p>Copyright@2021 All Rights Reserved.</p>
+      <span class="arrowup"><i class="fas fa-angle-up fa-lg"></i></span>
+    </div>
+  </footer>
+</body>
+</html>
