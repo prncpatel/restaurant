@@ -90,21 +90,46 @@ header .menu a{
   top:148px;
   right:5px
 }
+@media screen and (max-width:1200px){
+  .welcome{
+    margin-top: 120px;
+  }
+  
+}
 @media screen and (max-width:992px){
+  .welcome{
+    margin-top: 100px;
+  }
   .card{
-    width: 255px;
-    margin-right: 200px;
+    width: 300px;
+    margin: 0px auto;
   }
   
 }
 @media screen and (max-width:768px){
+  .welcome{
+    margin-top: 120px;
+  }
   .card{
     width: 350px;
     margin: 20px auto;
   }
   
 }
+@media screen and (max-width:650px){
+  .welcome{
+    margin-top: 120px;
+  }
+}
+@media screen and (max-width:476px){
+  .welcome{
+    margin-top: 140px;
+  }
+}
 @media screen and (max-width:426px){
+  .welcome{
+    margin-top: 160px;
+  }
   .card{
     width: 320px;
     margin: 20px auto;
