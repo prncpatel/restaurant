@@ -21,6 +21,10 @@
   text-shadow: 2px 2px 4px darkslategray;
   word-spacing: 2px;
 }
+*{
+  margin: 0%;
+  padding: 0%;
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -47,8 +51,6 @@ header{
     top: 0;
     z-index:100;
     width:100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
 }
 header .title{
     font-family: 'Prompt', sans-serif;
